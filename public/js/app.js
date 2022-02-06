@@ -23029,6 +23029,7 @@ __webpack_require__.r(__webpack_exports__);
     getdata: {
       get: function get() {
         if (this.reusltdata) {
+          console.log(this.reusltdata);
           return this.reusltdata;
         } else {
           return this.weekdata;
@@ -23040,7 +23041,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
-    badgecolors: function badgecolors(data) {
+    badgecolors: function badgecolors() {
       var colors = ["primary", "success", "warning", "danger", "dark", "info"];
       var x = Math.floor(Math.random() * 5);
       var name = 'bg-' + colors[x];
@@ -23095,7 +23096,6 @@ __webpack_require__.r(__webpack_exports__);
         var size = response.data.length;
         var items = response.data.slice(1, size);
         _this2.reusltdata = items;
-        console.log(_this2.reusltdata);
       })["catch"](function (error) {
         console.log(error);
       });
@@ -23882,15 +23882,15 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     , _hoisted_5);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($options.getdata, function (daydata) {
+  ))])]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($options.getdata, function (daydata, id) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       "class": "col p-5 align-items-center",
       onClick: function onClick($event) {
         return _ctx.$emit('populatemain', daydata);
       },
-      key: daydata[0].id
+      key: id
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["badge rounded-pill p-2 fw-light", $options.badgecolors(daydata[0].id)])
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["badge rounded-pill p-2 fw-light", $options.badgecolors()])
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.getday(daydata[0].datentime)), 3
     /* TEXT, CLASS */
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(daydata[0].temperature) + "°", 1

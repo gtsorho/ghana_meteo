@@ -10,7 +10,7 @@
                     <div class="list-group mt-2 text-sm-center text-lg-start">
                         <a href="#" @click="getLocationData(locationData.location)"  class="text-capitalize list-group-item ps-3 list-group-item-action"
                             v-for="locationData in searchdatares" 
-                            :key="locationData.id">
+                            :key="locationData.id"  >
                             {{locationData.location}}
                         </a>
                     </div>
@@ -18,8 +18,8 @@
                 
                 
                 
-                <div class="col p-5 align-items-center" @click="$emit('populatemain',daydata)" v-for="daydata in getdata" :key="daydata[0].id">
-                    <span class="badge rounded-pill  p-2 fw-light" :class="badgecolors(daydata[0].id)">{{getday(daydata[0].datentime)}}</span>
+                <div class="col p-5 align-items-center" @click="$emit('populatemain',daydata)" v-for="(daydata, id) in getdata" :key="id">
+                    <span class="badge rounded-pill  p-2 fw-light" :class="badgecolors()">{{getday(daydata[0].datentime)}}</span>
                     <ul class="nav flex-column">
                         <li class="nav-item my-2"><h1>{{daydata[0].temperature}}°</h1></li>
                         <li class="nav-item mb-2">
@@ -53,10 +53,9 @@ export default {
             getdata:{
                 get(){
                     if(this.reusltdata){
+                    console.log(this.reusltdata) 
                         return this.reusltdata
-                        
                     }else{
-                        
                         return this.weekdata
                     }
                 },
@@ -66,7 +65,7 @@ export default {
             },            
     },
     methods: {
-        badgecolors(data){
+        badgecolors(){
                 const colors = ["primary","success","warning","danger","dark","info"];
                 var x = Math.floor(Math.random() * 5);
                 let name = 'bg-' + colors[x];
@@ -115,8 +114,7 @@ export default {
 
                     const size = response.data.length
                     const items = response.data.slice(1, size)
-                    this.reusltdata = items   
-                    console.log(this.reusltdata)                 
+                    this.reusltdata = items                   
                 })
                 .catch(error => {
                     console.log(error);

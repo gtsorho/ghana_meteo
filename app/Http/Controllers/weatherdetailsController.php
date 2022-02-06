@@ -42,6 +42,12 @@ class weatherdetailsController extends Controller
             $date = $today->subDay($x)->toDateString();
             $arr[] = weatherdata::where('location', 'like', '%'.$location.'%')->whereDate('datentime',$date)->get();
         }
+        // dd(sizeof( $arr[0]));
+        foreach ($arr as $key => $value) {
+            if(sizeof($value) == 0){
+                unset($arr[$key]);
+            }
+        }
         return response()->json($arr, 200);
     }
 
