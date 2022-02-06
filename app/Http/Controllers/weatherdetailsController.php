@@ -8,6 +8,7 @@ use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\weatherdataimport;
 use App\Exports\weatherDataExport;
 use Carbon\Carbon;
+use DB;
 
 
 class weatherdetailsController extends Controller
