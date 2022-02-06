@@ -23075,7 +23075,6 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       var location = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-      alert('hello');
       var url = "/api/searcharea/".concat(location);
 
       if (!location) {

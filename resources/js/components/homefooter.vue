@@ -95,7 +95,6 @@ export default {
             return name
         },
         search(location = null){
-            alert('hello')
             var url = `/api/searcharea/${location}`
             if(!location){
                 url = `/api/searcharea/`
