@@ -35,12 +35,12 @@ class weatherdetailsController extends Controller
 
         for ($x = 0; $x <= 6; $x++) {
             $today = Carbon::today();
-            if(!weatherdata::where('cast(location AS VARCHAR)', 'like', '%'.$location.'%')->whereDate('datentime',$today->toDateString())->exists()){
-                $today = weatherdata::where('cast(location AS VARCHAR)', 'like', '%'.$location.'%')->orderByDesc('datentime')->limit(1)->first()['datentime']; 
+            if(!weatherdata::where(DB::raw('LOWER(location)'), 'like', '%'.$location.'%')->whereDate('datentime',$today->toDateString())->exists()){
+                $today = weatherdata::where(DB::raw('LOWER(location)'), 'like', '%'.$location.'%')->orderByDesc('datentime')->limit(1)->first()['datentime']; 
                 $today = new Carbon($today); 
             }
             $date = $today->subDay($x)->toDateString();
-            $arr[] = weatherdata::where('cast(location AS VARCHAR)', 'like', '%'.$location.'%')->whereDate('datentime',$date)->get();
+            $arr[] = weatherdata::where(DB::raw('LOWER(location)'), 'like', '%'.$location.'%')->whereDate('datentime',$date)->get();
         }
         return response()->json($arr, 200);
     }
@@ -49,7 +49,7 @@ class weatherdetailsController extends Controller
 
     public function searchlocation($location = null)
     {   
-        $data = weatherdata::where('cast(location AS VARCHAR)', 'like', '%'.$location.'%')->select('location')->groupBy('location')->get();
+        $data = weatherdata::where(DB::raw('LOWER(location)'), 'like', '%'.$location.'%')->select('location')->groupBy('location')->get();
         return response()->json($data, 200);
     }
 
@@ -62,19 +62,19 @@ class weatherdetailsController extends Controller
             $to = date($request->date[1]);
 
             if($request->has('location') && $request->has('date')){
-                $data = weatherdata::where('cast(location AS VARCHAR)', 'like', '%'.$request->location.'%')->whereBetween('datentime', [$from, $to])->latest()->paginate(13);
+                $data = weatherdata::where(DB::raw('LOWER(location)'), 'like', '%'.$request->location.'%')->whereBetween('datentime', [$from, $to])->latest()->paginate(13);
             }elseif($request->has('date')){
                 $data = weatherdata::whereBetween('datentime', [$from, $to])->latest()->paginate(13);
             }elseif($request->has('location')){
-                $data = weatherdata::where('cast(location AS VARCHAR)', 'like', '%'.$request->location.'%')->latest()->paginate(13);
+                $data = weatherdata::where(DB::raw('LOWER(location)'), 'like', '%'.$request->location.'%')->latest()->paginate(13);
             }
         }elseif (gettype($request->date) == 'string' || gettype($request->date) == 'NULL') {
             if($request->has('location') && $request->has('date')){
-                $data = weatherdata::where('cast(location AS VARCHAR)', 'like', '%'.$request->location.'%')->whereDate('datentime', 'like', '%'.$request->date.'%')->latest()->paginate(13);
+                $data = weatherdata::where(DB::raw('LOWER(location)'), 'like', '%'.$request->location.'%')->whereDate(DB::raw('LOWER(datentime)'), 'like', '%'.$request->date.'%')->latest()->paginate(13);
             }elseif($request->has('date')){
-                $data = weatherdata:: whereDate('datentime', 'like', '%'.$request->date.'%')->latest()->paginate(13);
+                $data = weatherdata:: whereDate(DB::raw('LOWER(datentime)'), 'like', '%'.$request->date.'%')->latest()->paginate(13);
             }elseif($request->has('location')){
-                $data = weatherdata::where('cast(location AS VARCHAR)', 'like', '%'.$request->location.'%')->latest()->paginate(13);
+                $data = weatherdata::where(DB::raw('LOWER(location)'), 'like', '%'.$request->location.'%')->latest()->paginate(13);
             }
         }
         return response()->json($data, 200);
@@ -171,19 +171,19 @@ class weatherdetailsController extends Controller
             $to = date($request->date[1]);
 
             if($request->has('location') && $request->has('date')){
-                $data = weatherdata::where('cast(location AS VARCHAR)', 'like', '%'.$request->location.'%')->whereBetween('datentime', [$from, $to])->latest()->get();
+                $data = weatherdata::where('location', 'like', '%'.$request->location.'%')->whereBetween('datentime', [$from, $to])->latest()->get();
             }elseif($request->has('date')){
                 $data = weatherdata::whereBetween('datentime', [$from, $to])->latest()->get();
             }elseif($request->has('location')){
-                $data = weatherdata::where('cast(location AS VARCHAR)', 'like', '%'.$request->location.'%')->latest()->get();
+                $data = weatherdata::where('location', 'like', '%'.$request->location.'%')->latest()->get();
             }
         }elseif (gettype($request->date) == 'string' || gettype($request->date) == 'NULL') {
             if($request->has('location') && $request->has('date')){
-                $data = weatherdata::where('cast(location AS VARCHAR)', 'like', '%'.$request->location.'%')->whereDate('datentime', 'like', '%'.$request->date.'%')->latest()->get();
+                $data = weatherdata::where('location', 'like', '%'.$request->location.'%')->whereDate('datentime', 'like', '%'.$request->date.'%')->latest()->get();
             }elseif($request->has('date')){
                 $data = weatherdata:: whereDate('datentime', 'like', '%'.$request->date.'%')->latest()->get();
             }elseif($request->has('location')){
-                $data = weatherdata::where('cast(location AS VARCHAR)', 'like', '%'.$request->location.'%')->latest()->get();
+                $data = weatherdata::where('location', 'like', '%'.$request->location.'%')->latest()->get();
             }
         }
         // return response()->json($data, 200);
