@@ -4,7 +4,7 @@
                 <div class="col-lg-4 col-sm-8 px-5 py-2 ">
                     <div class="input-group mb-3">
                         <input class="form-control d-inline" type="text" v-model="searchdata" @keyup="search(searchdata)" placeholder="Search">
-                        <button class="btn btn-warning d-inline" @click="search('')">All locations</button>
+                        <button type="button" class="btn btn-warning d-inline" @click="search()">All locations</button>
                     </div>
 
                     <div class="list-group mt-2 text-sm-center text-lg-start">
