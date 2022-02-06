@@ -23075,6 +23075,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       var location = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+      alert('hello');
       var url = "/api/searcharea/".concat(location);
 
       if (!location) {
@@ -23867,7 +23868,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.searchdata]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "btn btn-warning d-inline",
     onClick: _cache[2] || (_cache[2] = function ($event) {
-      return $options.search();
+      return $options.search('');
     })
   }, "All locations")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.searchdatares, function (locationData) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("a", {

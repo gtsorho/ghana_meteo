@@ -11,10 +11,7 @@
         </div>
         
     </div>
-    
-    
-    
-    
+ 
 </template>
 <script>
 import Adminlefttop from '../components/adminlefttop.vue'
