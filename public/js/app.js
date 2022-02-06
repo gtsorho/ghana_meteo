@@ -29461,7 +29461,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.left[data-v-034aca60] {\r\n    /* padding: 1%; */\r\n    height: 100%;\n}\n.right[data-v-034aca60]{\r\n    height: 100%;\n}\r\n    /* If the screen size is 1000px or more, set the font-size of <div> to 80px */\n@media only screen and (max-width: 768px) {\n.right[data-v-034aca60]{\r\n        margin-top : 1% !important;\n}\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.left[data-v-034aca60] {\r\n    /* padding: 1%; */\r\n    height: 100%;\n}\n.right[data-v-034aca60]{\r\n    height: 100%;\n}\r\n    /* If the screen size is 1000px or more, set the font-size of <div> to 80px */\n@media only screen and (max-width: 768px) {\n.right[data-v-034aca60]{\r\n        margin-top : 10% !important;\r\n        margin-bottom : 10% !important;\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

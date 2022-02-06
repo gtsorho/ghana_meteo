@@ -49,8 +49,10 @@ export default {
     /* If the screen size is 1000px or more, set the font-size of <div> to 80px */
 @media only screen and (max-width: 768px) {
     .right{
-        margin-top : 1% !important;
-    }
+        margin-top : 10% !important;
+        margin-bottom : 10% !important;
+
+}
 }
 </style>
 <style>
