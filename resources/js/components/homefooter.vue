@@ -96,11 +96,11 @@ export default {
             return name
         },
         search(location = null){
-            var url = `/api/searcharea/${location}`
-            if(!location){
-                url = `/api/searcharea/`
-            }
-            axios.get(url)
+            // var url = `/api/searcharea/${location}`
+            // if(!location){
+            //     url = `/api/searcharea/`
+            // }
+            axios.get(`/api/searcharea/`)
                 .then(response =>  {
                     this.searchdatares = response.data
                 })
