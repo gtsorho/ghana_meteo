@@ -119,7 +119,7 @@ export default {
     .fs-6 {
         font-size: .8rem !important;
         font-weight: 100 !important;
-        line-height: 1 !important;
+        line-height: 1.2 !important;
     }
 }
 
