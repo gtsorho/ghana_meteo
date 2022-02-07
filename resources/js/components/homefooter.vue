@@ -100,7 +100,7 @@ export default {
         search(location = null){
             var url = `/api/searcharea/${location}`
             if(!location){
-                url = `/api/searcharea/`
+                url = `https://ghmeteo.herokuapp.com/api/searcharea`
             }
             axios.get(url)
                 .then(response =>  {
