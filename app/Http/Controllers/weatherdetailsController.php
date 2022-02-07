@@ -55,6 +55,10 @@ class weatherdetailsController extends Controller
 
     public function searchlocation($location = null)
     {   
+        if($location === 'alldata'){
+            $location = null;
+        }
+
         $data = weatherdata::where('location', 'like', '%'.$location.'%')->select('location')->groupBy('location')->get();
         return response()->json($data, 200);
     }

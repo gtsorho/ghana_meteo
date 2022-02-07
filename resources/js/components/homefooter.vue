@@ -64,6 +64,9 @@ export default {
                 }
             },            
     },
+    created(){
+        this.search()
+    },
     methods: {
         badgecolors(){
                 const colors = ["primary","success","warning","danger","dark","info"];
