@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-4 text-center align-self-center">
                     <h4 class="display-3 text-capitalize">{{getdata[0]?.location}}</h4>
-                    <h5 class="text-capitalize">{{getday}}</h5>
+                    <h5 class="fs-6 text-capitalize">{{getday}}</h5>
                 </div>
                 <div class="col-4  align-self-center text-center text-md-start">
                     <i class="bi display-1" :class="iconclass" ></i>
@@ -19,7 +19,7 @@
             <div class="row justify-content-md-center">
                 <div class="col text-center" v-for="data in getdatatwo" :key="data.id">
                     <p class="fs-5 text-capitalize text-success fw-bolder">{{data.temperature}}° {{data.weather}}</p>
-                    <p class=" text-capitalize">{{data.timeofday}} </p>
+                    <p class="fs-6 text-capitalize">{{data.timeofday}} </p>
                 </div>
             </div>
 
@@ -105,6 +105,21 @@ export default {
         font-size: 1.75rem !important;
         font-weight: 300 !important;
         line-height: 1.0 !important;
+    }
+    .display-1 {
+        font-size: 1.75rem !important;
+        font-weight: 200 !important;
+        line-height: .50 !important;
+    }
+    .fs-5 {
+        font-size: 1rem !important;
+        font-weight: 100 !important;
+        line-height: .50 !important;
+    }
+    .fs-6 {
+        font-size: .8rem !important;
+        font-weight: 100 !important;
+        line-height: 1 !important;
     }
 }
 

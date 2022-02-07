@@ -23984,7 +23984,7 @@ var _hoisted_7 = {
   "class": "display-3 text-capitalize"
 };
 var _hoisted_8 = {
-  "class": "text-capitalize"
+  "class": "fs-6 text-capitalize"
 };
 var _hoisted_9 = {
   "class": "col-4 align-self-center text-center text-md-start"
@@ -24008,7 +24008,7 @@ var _hoisted_13 = {
   "class": "fs-5 text-capitalize text-success fw-bolder"
 };
 var _hoisted_14 = {
-  "class": "text-capitalize"
+  "class": "fs-6 text-capitalize"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _$options$getdata$, _$options$getdata$2, _$options$getdata$3;
@@ -29438,7 +29438,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.row div[data-v-417ce863]{\r\n    color: rgb(197, 197, 197);\n}\n.card[data-v-417ce863]{\r\n    margin-top: 10rem !important;\r\n    width: 80%;\r\n    overflow-wrap: normal;\r\n    background-color: rgb(0 0 0 / 50%) !important;\r\n    border: 0px solid rgba(255, 255, 255, 0.125) !important;\n}\r\n/* If the screen size is 601px or more, set the font-size of <div> to 80px */\r\n/* @media only screen and (min-width: 601px) {\r\n  div.example {\r\n    font-size: 80px;\r\n  }\r\n} */\r\n\r\n/* If the screen size is 600px or less, set the font-size of <div> to 30px */\n@media only screen and (max-width: 800px) {\n.card[data-v-417ce863]{\r\n        width: inherit;\n}\n.display-3[data-v-417ce863] {\r\n        font-size: 1.75rem !important;\r\n        font-weight: 300 !important;\r\n        line-height: 1.0 !important;\n}\n}\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.row div[data-v-417ce863]{\r\n    color: rgb(197, 197, 197);\n}\n.card[data-v-417ce863]{\r\n    margin-top: 10rem !important;\r\n    width: 80%;\r\n    overflow-wrap: normal;\r\n    background-color: rgb(0 0 0 / 50%) !important;\r\n    border: 0px solid rgba(255, 255, 255, 0.125) !important;\n}\r\n/* If the screen size is 601px or more, set the font-size of <div> to 80px */\r\n/* @media only screen and (min-width: 601px) {\r\n  div.example {\r\n    font-size: 80px;\r\n  }\r\n} */\r\n\r\n/* If the screen size is 600px or less, set the font-size of <div> to 30px */\n@media only screen and (max-width: 800px) {\n.card[data-v-417ce863]{\r\n        width: inherit;\n}\n.display-3[data-v-417ce863] {\r\n        font-size: 1.75rem !important;\r\n        font-weight: 300 !important;\r\n        line-height: 1.0 !important;\n}\n.display-1[data-v-417ce863] {\r\n        font-size: 1.75rem !important;\r\n        font-weight: 200 !important;\r\n        line-height: .50 !important;\n}\n.fs-5[data-v-417ce863] {\r\n        font-size: 1rem !important;\r\n        font-weight: 100 !important;\r\n        line-height: .50 !important;\n}\n.fs-6[data-v-417ce863] {\r\n        font-size: .8rem !important;\r\n        font-weight: 100 !important;\r\n        line-height: 1 !important;\n}\n}\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
