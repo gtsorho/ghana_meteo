@@ -98,9 +98,9 @@ export default {
             return name
         },
         search(location = null){
-            var url = `/api/searcharea/${location}`
+            var url = `https://ghmeteo.herokuapp.com/api/searcharea/${location}`
             if(!location){
-                url = `https://ghmeteo.herokuapp.com/api/searcharea`
+                url = `https://ghmeteo.herokuapp.com/api/searcharea/`
             }
             axios.get(url)
                 .then(response =>  {
