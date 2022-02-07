@@ -23078,7 +23078,7 @@ __webpack_require__.r(__webpack_exports__);
       var url = "/api/searcharea/".concat(location);
 
       if (!location) {
-        url = "/api/searcharea/";
+        url = "/api/searcharea/".concat(location);
       }
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().get(url).then(function (response) {

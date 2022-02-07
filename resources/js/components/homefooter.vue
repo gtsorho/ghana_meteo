@@ -97,7 +97,7 @@ export default {
         search(location = null){
             var url = `/api/searcharea/${location}`
             if(!location){
-                url = `/api/searcharea/`
+                url = `/api/searcharea/${location}`
             }
             axios.get(url)
                 .then(response =>  {
