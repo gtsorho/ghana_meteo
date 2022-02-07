@@ -3,14 +3,14 @@
     <div class="card rounded-pill m-auto">
     <div class="card-body">
             <div class="row">
-                <div class="col-4 text-end">
+                <div class="col-4 text-center text-md-end">
                     <h1 class="display-1 text-capitalize">{{getdata[0]?.temperature}}°</h1>
                 </div>
                 <div class="col-4 text-center align-self-center">
                     <h4 class="display-3 text-capitalize">{{getdata[0]?.location}}</h4>
                     <h5 class="text-capitalize">{{getday}}</h5>
                 </div>
-                <div class="col-4 text-start align-self-center">
+                <div class="col-4  align-self-center text-center text-md-start">
                     <i class="bi display-1" :class="iconclass" ></i>
                     <h5 class="text-capitalize">{{getdata[0]?.weather}}</h5>
                 </div>

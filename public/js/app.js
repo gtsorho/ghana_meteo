@@ -23972,7 +23972,7 @@ var _hoisted_3 = {
   "class": "row"
 };
 var _hoisted_4 = {
-  "class": "col-4 text-end"
+  "class": "col-4 text-center text-md-end"
 };
 var _hoisted_5 = {
   "class": "display-1 text-capitalize"
@@ -23987,7 +23987,7 @@ var _hoisted_8 = {
   "class": "text-capitalize"
 };
 var _hoisted_9 = {
-  "class": "col-4 text-start align-self-center"
+  "class": "col-4 align-self-center text-center text-md-start"
 };
 var _hoisted_10 = {
   "class": "text-capitalize"
