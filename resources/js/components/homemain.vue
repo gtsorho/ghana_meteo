@@ -101,5 +101,11 @@ export default {
     .card{
         width: inherit;
     }
+    .display-3 {
+        font-size: 1.75rem !important;
+        font-weight: 300 !important;
+        line-height: 1.0 !important;
+    }
 }
+
 </style>
