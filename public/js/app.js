@@ -23040,7 +23040,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
   },
-  mounted: function mounted() {
+  beforeCreate: function beforeCreate() {
     this.search();
   },
   methods: {
@@ -23078,10 +23078,10 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       var location = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-      var url = "https://ghmeteo.herokuapp.com/api/searcharea/".concat(location);
+      var url = "/api/searcharea/".concat(location);
 
       if (!location) {
-        url = "https://ghmeteo.herokuapp.com/api/searcharea/";
+        url = "/api/searcharea/";
       }
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().get(url).then(function (response) {

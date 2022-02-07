@@ -64,7 +64,7 @@ export default {
                 }
             },            
     },
-    mounted(){
+    beforeCreate(){
         this.search();
     },
     methods: {
@@ -98,9 +98,9 @@ export default {
             return name
         },
         search(location = null){
-            var url = `https://ghmeteo.herokuapp.com/api/searcharea/${location}`
+            var url = `/api/searcharea/${location}`
             if(!location){
-                url = `https://ghmeteo.herokuapp.com/api/searcharea/`
+                url = `/api/searcharea/`
             }
             axios.get(url)
                 .then(response =>  {
