@@ -23021,7 +23021,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       reusltdata: null,
-      searchdata: '',
+      searchdata: null,
       searchdatares: null
     };
   },
@@ -23078,7 +23078,7 @@ __webpack_require__.r(__webpack_exports__);
       var url = "/api/searcharea/".concat(location);
 
       if (!location) {
-        url = "/api/searcharea/".concat(location);
+        url = "/api/searcharea/alldata";
       }
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().get(url).then(function (response) {

@@ -45,7 +45,7 @@ export default {
     data() {
         return {
             reusltdata:null,
-            searchdata:'',
+            searchdata:null,
             searchdatares:null,
         }
     },
@@ -97,7 +97,7 @@ export default {
         search(location = null){
             var url = `/api/searcharea/${location}`
             if(!location){
-                url = `/api/searcharea/${location}`
+                url = `/api/searcharea/alldata`
             }
             axios.get(url)
                 .then(response =>  {
