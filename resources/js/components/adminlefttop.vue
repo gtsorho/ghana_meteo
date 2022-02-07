@@ -203,14 +203,14 @@ form{
         backdrop-filter: blur(7px);
         border:none;
         border-radius: none;
-        height: 40%;
+        height: auto;
         width: 100%;
     }
 
 /* If the screen size is 1000px or more, set the font-size of <div> to 80px */
 @media only screen and (max-width: 768px) {
     .card{
-        height: 50%;
+        height: auto;
     }
 }
 .fade-enter-active, .fade-leave-active {

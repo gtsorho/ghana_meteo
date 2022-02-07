@@ -31,7 +31,7 @@ export default {
     /* If the screen size is 1000px or more, set the font-size of <div> to 80px */
 @media only screen and (max-width: 768px) {
     .card{
-        height: 50.5% !important;
+        height: auto !important;
     }
 }
 </style>

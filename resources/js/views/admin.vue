@@ -9,7 +9,6 @@
         <div class="col right">
             <Adminright @datatoupdate="datatoupdate=$event"/>            
         </div>
-        
     </div>
  
 </template>
@@ -36,20 +35,16 @@ export default {
 </script>
 <style scoped>
 .left {
-    /* padding: 1%; */
     height: 100%;
-
-}
+    }
 .right{
-    height: 100%;
+    /* height: 100%; */
 }
     /* If the screen size is 1000px or more, set the font-size of <div> to 80px */
 @media only screen and (max-width: 768px) {
     .right{
         margin-top : 10% !important;
-        margin-bottom : 10% !important;
-
-}
+    }
 }
 </style>
 <style>
@@ -66,7 +61,7 @@ export default {
     /* --popper-theme-padding: 5px; */
     /* --popper-theme-box-shadow: 0 6px 30px -6px rgba(0, 0, 0, 0.25); */
     }
-        .mx-input {
+    .mx-input {
     display: inline-block;
     box-sizing: border-box;
     width: 100%;
