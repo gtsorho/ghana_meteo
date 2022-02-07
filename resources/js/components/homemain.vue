@@ -3,7 +3,7 @@
     <div class="card rounded-pill m-auto">
     <div class="card-body">
             <div class="row">
-                <div class="col-4 text-center text-md-end">
+                <div class="col-4 align-self-center text-center text-md-end">
                     <h1 class="display-1 text-capitalize">{{getdata[0]?.temperature}}°</h1>
                 </div>
                 <div class="col-4 text-center align-self-center">
