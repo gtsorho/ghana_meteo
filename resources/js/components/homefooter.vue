@@ -64,8 +64,8 @@ export default {
                 }
             },            
     },
-    beforeCreate(){
-        this.search();
+    created(){
+        
     },
     methods: {
         badgecolors(){
