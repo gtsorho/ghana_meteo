@@ -23040,7 +23040,6 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
   },
-  created: function created() {},
   methods: {
     badgecolors: function badgecolors() {
       var colors = ["primary", "success", "warning", "danger", "dark", "info"];
