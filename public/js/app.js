@@ -23392,7 +23392,7 @@ var _hoisted_8 = {
 
 var _hoisted_9 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-    "for": "inputlocation4",
+    "for": "location",
     "class": "form-label"
   }, "location", -1
   /* HOISTED */
@@ -23467,7 +23467,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     type: "text",
     "class": "form-control",
     id: "inputlocation4",
-    placeholder: "Apam",
+    placeholder: "morning",
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
       return $props.updatedata.timeofday = $event;
     })
@@ -23476,7 +23476,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $props.updatedata.timeofday]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     "class": "form-control",
-    id: "inputlocation4",
+    id: "location",
     placeholder: "Apam",
     "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
       return $props.updatedata.location = $event;

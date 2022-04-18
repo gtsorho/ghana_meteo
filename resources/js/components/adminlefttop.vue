@@ -8,11 +8,11 @@
             </div>
             <div class="col-md-6">
                 <label for="inputlocation4" class="form-label">Time of Day</label>
-                <input type="text" class="form-control" id="inputlocation4"  placeholder="Apam" v-model="updatedata.timeofday">
+                <input type="text" class="form-control" id="inputlocation4"  placeholder="morning" v-model="updatedata.timeofday">
             </div>
             <div class="col-md-12">
-                <label for="inputlocation4" class="form-label">location</label>
-                <input type="text" class="form-control" id="inputlocation4"  placeholder="Apam" v-model="updatedata.location">
+                <label for="location" class="form-label">location</label>
+                <input type="text" class="form-control" id="location"  placeholder="Apam" v-model="updatedata.location">
             </div>
             <div class="col-6">
                 <label for="imputTemp" class="form-label text-start">Temperature</label>
